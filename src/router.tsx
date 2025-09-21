@@ -16,9 +16,11 @@ import {
   DEPARTMENT_URL,
   FEATURE_URL,
   LOGIN_URL,
+  PRODUCT_URL,
   ROLE_URL,
   USER_URL,
 } from "./urls";
+import { ProductPage } from "./modules/administration/product";
 
 export const router = createBrowserRouter([
   {
@@ -82,6 +84,16 @@ export const router = createBrowserRouter([
             Element={RolePage}
             title={t("nav.role")}
             url={ROLE_URL}
+          />
+        ),
+      },
+      {
+        path: PRODUCT_URL,
+        element: (
+          <ProtectedComponent
+            Element={ProductPage}
+            title={t("nav.product")}
+            url={PRODUCT_URL}
           />
         ),
       },

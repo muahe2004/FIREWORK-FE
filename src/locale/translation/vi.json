@@ -87,7 +87,7 @@
 
       "declaration_canceled": "Số tờ khai bị hủy",
       "date_canceled": "Thời gian hủy",
-      "reason": "Lý do"
+      "reason": "Lý do"    
     }
   },
   "messages": {
@@ -807,7 +807,7 @@
   },
 
   "product": {
-    "title": "DANH SÁCH SẢN PHẨM ",
+    "title": "QUẢN LÝ SẢN PHẨM ",
     "title_update": "Chi tiết sản phẩm",
     "title_norm": "Chi tiết định mức",
     "title_list_norm": "Danh sách định mức sản phẩm",
@@ -825,6 +825,11 @@
       "product_code": "Mã sản phẩm",
       "detail": "Thông tin sản phẩm",
       "product_name": "Tên sản phẩm",
+      "product_imageURL": "Hình ảnh",
+      "product_type": "Loại sản phẩm",
+      "product_price": "Giá bán",
+      "product_stock": "Số lượng tồn",
+      "product_description": "Mô tả",
       "product_expense": "Thông số trong QTSX",
       "total_not_co": "Tổng SP chưa làm C/O",
       "unit_acronym": "ĐVT",
@@ -834,7 +839,7 @@
       "btn_norm_update": "Cập nhật định mức",
       "material_code": "Mã NL, VT",
       "material_name": "Tên",
-      "unit": "Đơn vị tính",
+      "product_unit": "Đơn vị tính",
       "norm": "Định mức",
       "ratio_loss": "Tỷ lệ hao hụt (%)",
       "norm_loss": "ĐMCCHH",

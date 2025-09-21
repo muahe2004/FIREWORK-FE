@@ -6,6 +6,7 @@ const BRANCH_URL = `${AUTHORIZATION_URL}/branches`;
 const DEPARTMENT_URL = `${AUTHORIZATION_URL}/departments`;
 const USER_URL = `${AUTHORIZATION_URL}/users`;
 const FEATURE_URL = `${AUTHORIZATION_URL}/functions`;
+const PRODUCT_URL = `${AUTHORIZATION_URL}/products`;
 const ROLE_URL = `${AUTHORIZATION_URL}/roles`;
 
 const HOME_URL = AUTHORIZATION_URL;
@@ -21,4 +22,5 @@ export {
   USER_URL,
   FEATURE_URL,
   ROLE_URL,
+  PRODUCT_URL,
 };
