@@ -1,0 +1,139 @@
+:root {
+  --color-primary: #07527e;
+}
+
+$color-primary-1: #052e4d;
+$color-primary-2: #054265;
+$color-primary: var(--color-primary);
+$color-primary-3: #042e4d;
+$color-primary-4: #0a7aae;
+$color-primary-5: #0fa2df;
+$color-primary-6: #2bc1f4;
+$color-primary-7: #5ad7f6;
+$color-primary-8: #8ae7f9;
+$color-primary-9: #baf3fc;
+$color-primary-10: #ecfdfe;
+
+$color-secondary: #2c3030;
+$color-secondary-2: #444a4b;
+$color-secondary-3: #5c6566;
+$color-secondary-4: #757f80;
+$color-secondary-5: #8f9899;
+$color-secondary-6: #aab1b1;
+$color-secondary-7: #c4c9ca;
+$color-secondary-8: #dee2e2;
+$color-secondary-9: #fafafa;
+
+$color-opacity-primary: #e6eaed;
+$color-opacity-secondary: #f1f2f2;
+$color-opacity-success: #ebf5e7;
+$color-opacity-info: #ecf6ff;
+$color-opacity-warn: #fff9f0;
+$color-opacity-danger: #ffeded;
+
+$color-success: #53c31b;
+$color-info: #3fa9ff;
+// $color-warn: #ffbf69;
+$color-warn: #e8751a;
+$color-danger: #ff4d4f;
+$color-white: #ffffff;
+$color-black: #222;
+$color-background: #f2f3f3;
+$color-mint: #13c2c2;
+
+@mixin resp-text($init: 16px, $md: 16px, $sm: 16px) {
+  font-size: $init;
+
+  @media only screen and (max-width: 1480px) {
+    font-size: $md;
+  }
+  @media only screen and (max-width: 992px) {
+    font-size: $md;
+  }
+  @media only screen and (max-width: 768px) {
+    font-size: $sm;
+  }
+}
+
+@mixin resp-padding($init: 0, $md: 0, $sm: 0) {
+  padding: $init;
+
+  @media only screen and (max-width: 992px) {
+    padding: $md;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: $sm;
+  }
+}
+
+@mixin resp-margin($init: 0, $md: 0, $sm: 0) {
+  margin: $init;
+
+  @media only screen and (max-width: 992px) {
+    margin: $md;
+  }
+  @media only screen and (max-width: 768px) {
+    margin: $sm;
+  }
+}
+
+@mixin resp-display($init: block, $md: block, $sm: block) {
+  display: $init;
+
+  @media only screen and (max-width: 992px) {
+    display: $md;
+  }
+  @media only screen and (max-width: 768px) {
+    display: $sm;
+  }
+}
+
+@mixin resp-height($init: auto, $md: auto, $sm: auto) {
+  height: $init;
+
+  @media only screen and (max-width: 1480px) {
+    height: $md;
+  }
+  @media only screen and (max-width: 992px) {
+    height: $md;
+  }
+  @media only screen and (max-width: 768px) {
+    height: $sm;
+  }
+}
+
+@mixin resp-width($init: auto, $md: auto, $sm: auto) {
+  width: $init;
+
+  @media only screen and (max-width: 992px) {
+    width: $md;
+  }
+  @media only screen and (max-width: 768px) {
+    width: $sm;
+  }
+}
+
+@mixin resp-max-width($init: auto, $md: auto, $sm: auto) {
+  max-width: $init;
+
+  @media only screen and (max-width: 992px) {
+    max-width: $md;
+  }
+  @media only screen and (max-width: 768px) {
+    max-width: $sm;
+  }
+}
+
+@mixin perfect-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin perfect-flex-center($direction: "row") {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}

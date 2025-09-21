@@ -1,0 +1,94 @@
+@import "@/assets/scss/variables";
+
+.backdrop {
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.bg-login {
+  background: url("@/assets/img/login/bg_login.png") no-repeat left !important;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+
+  .login-form {
+    background-color: transparent !important;
+    z-index: 15;
+
+    label,
+    a {
+      font-weight: 300;
+      color: $color-white !important;
+    }
+
+    .logo {
+      display: block;
+    }
+
+    .title {
+      color: $color-white;
+      margin-top: 16px;
+      margin-bottom: 40px;
+      font-size: 30px;
+      font-weight: 700;
+    }
+
+    .form-card {
+      padding: 16px;
+      border-radius: 5px;
+
+      @media only screen and (max-width: 789px) {
+        backdrop-filter: blur(10px);
+        background-color: #00000038;
+      }
+    }
+
+    .copyright {
+      span {
+        color: $color-white;
+        font-weight: 300;
+      }
+
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.copyright-wrap {
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  display: flex;
+  align-items: flex-end;
+
+  .copyright {
+    margin-top: auto;
+    @include resp-width(auto, auto, 100% !important);
+    padding-left: 160px;
+    padding-bottom: 70px;
+
+    @media only screen and (max-width: 768px) {
+      padding: 0 !important;
+    }
+    @media only screen and (max-width: 1400px) {
+      padding-left: 90px;
+    }
+  }
+}
+
+.btn-submit {
+  font-size: 12px !important;
+
+  span {
+    margin: 0 !important;
+  }
+}

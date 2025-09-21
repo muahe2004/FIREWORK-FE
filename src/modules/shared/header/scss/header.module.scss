@@ -1,0 +1,40 @@
+@import "@/assets/scss/variables";
+
+.header {
+  .icon-menu {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  :global {
+    .ant-pro-page-container-affix > div:nth-child(2) {
+      top: 0 !important;
+    }
+
+    .ant-pro-page-container-affix > div {
+      height: 64px !important;
+    }
+  }
+}
+
+.breadcrumb {
+  background-color: $color-background !important;
+  :global {
+    .ant-page-header {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      padding-bottom: 0 !important;
+
+      .ant-breadcrumb {
+        li {
+          font-weight: 500;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

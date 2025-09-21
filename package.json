@@ -1,0 +1,71 @@
+{
+  "name": "firework-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "tsc && eslint --ext .js,.jsx,.ts,.tsx src",
+    "format": "prettier --write \"**/*.{ts,tsx,css,scss,json}\"",
+    "preview": "vite preview",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.2.6",
+    "@ant-design/plots": "^1.2.6",
+    "@ant-design/pro-components": "^2.6.43",
+    "@cyntler/react-doc-viewer": "^1.14.1",
+    "@uiw/react-back-top": "^4.22.3",
+    "antd": "5.14.0",
+    "axios": "^1.6.2",
+    "crypto-js": "^4.2.0",
+    "dayjs": "^1.11.10",
+    "i18next": "^23.7.11",
+    "i18next-browser-languagedetector": "^7.2.0",
+    "immer": "^10.0.3",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "react-beforeunload": "^2.6.0",
+    "react-countup": "^6.5.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.13",
+    "react-helmet-async": "^2.0.4",
+    "react-i18next": "^14.0.0",
+    "react-query": "^3.39.3",
+    "react-router-dom": "^6.21.1",
+    "recoil": "^0.7.7",
+    "socket.io-client": "^4.7.4"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/crypto-js": "^4.2.2",
+    "@types/lodash": "^4.14.202",
+    "@types/react": "^18.2.43",
+    "@types/react-beforeunload": "^2.1.5",
+    "@types/react-dom": "^18.2.17",
+    "@types/react-helmet": "^6.1.11",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-prettier": "^5.1.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "sass": "^1.69.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8",
+    "vite-plugin-svgr": "2.4.0"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --fix"
+    ],
+    "src/**/*.{ts,tsx,css,json,scss}": [
+      "prettier --write"
+    ]
+  }
+}
