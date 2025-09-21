@@ -1,4 +1,5 @@
 import { FormRule } from "antd";
+import { checkProductCode } from "@/services/product.service";
 
 // Validator
 interface keyValidator {
@@ -112,3 +113,30 @@ export const RULES_FORM: Record<keyof keyValidator, FormRule[]> = {
     },
   ],
 };
+
+let debounceTimer: NodeJS.Timeout;
+export const productCodeValidator =
+  (t: (key: string) => string) =>
+  async (_: any, value: string) => {
+    if (!value) return Promise.resolve();
+
+    if (debounceTimer) {
+      clearTimeout(debounceTimer);
+    }
+
+    return new Promise<void>((resolve, reject) => {
+      debounceTimer = setTimeout(async () => {
+        try {
+          const res = await checkProductCode(value);
+
+          if (res.exists) {
+            reject(new Error(t("messages.product_code_exists")));
+          } else {
+            resolve();
+          }
+        } catch (err) {
+          reject(new Error(t("messages.validate_failed")));
+        }
+      }, 2000);
+    });
+  };

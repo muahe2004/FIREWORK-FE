@@ -12,9 +12,10 @@ import {
 import { UserState } from "@/store/auth/atom";
 import { IProduct } from "@/types/product";
 import { useDisclosure } from "@/utils/modal";
-import { RULES_FORM } from "@/utils/validator";
+import { productCodeValidator, RULES_FORM } from "@/utils/validator";
 import { useDropdownProductTypes } from "@/loader/product-type.loader";
 import { ERROR_TIMEOUT } from "@/constant/config";
+import { checkProductCode } from "@/services/product.service";
 
 // const { Text } = Typography;
 interface Props {
@@ -147,7 +148,13 @@ export const ProductModal = ({ isCreate = true, product }: Props) => {
                         <Form.Item
                             label={t("product.fields.product_code")}
                             name="product_code"
-                            rules={[...RULES_FORM.required]}
+                            rules={[
+                                ...RULES_FORM.required,
+                                {
+                                    validator: productCodeValidator(t),
+                                },
+                            ]}
+
                         >
                             <Input
                             type="text"

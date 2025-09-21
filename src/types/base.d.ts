@@ -55,3 +55,8 @@ export type IBaseUpload = {
   message: string;
   success: boolean;
 };
+
+export interface ICheckCodeResponse {
+  success: boolean;
+  exists: boolean;
+}

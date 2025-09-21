@@ -122,7 +122,8 @@
     "same_pdf_xml": "Bạn cần import đồng thời cả XML và PDF",
     "error": "Có lỗi xảy ra! Vui lòng thử lại.",
     "alert_lack_materials": "nguyên phụ liệu đang không có trong tờ khai và hóa đơn VAT, hoặc bị thiếu (thừa) trong định mức chỉ định.",
-    "suggest_not_found": "Không tìm thấy gợi ý nào."
+    "suggest_not_found": "Không tìm thấy gợi ý nào.",
+    "product_code_exists": "Mã sản phẩm đã tồn tại."
   },
   "nav": {
     "dashboard": "Dashboard",
